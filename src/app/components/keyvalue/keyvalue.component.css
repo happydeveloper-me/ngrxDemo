@@ -1,12 +1,21 @@
-.btn {
-  margin-top: 1rem;
-  width: 100%;
-}
-
 label {
   margin-top: 1rem;
 }
 
 .row {
   margin-top: 1rem;
+}
+
+.result {
+  font-size: 2rem;
+  padding-left: 3rem;
+}
+
+input {
+  font-size: 2rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
 }

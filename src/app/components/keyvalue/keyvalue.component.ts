@@ -11,6 +11,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./keyvalue.component.css'],
 })
 export class KeyvalueComponent implements OnInit {
+  public myData: any[] = [];
+  public searchResults: any[] = [];
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -36,6 +38,7 @@ export class KeyvalueComponent implements OnInit {
         })
       )
       .subscribe((res) => {
+        this.myData = res;
         console.log(res);
       });
   }
@@ -54,6 +57,14 @@ export class KeyvalueComponent implements OnInit {
       .subscribe((res) => {
         console.log(res);
       });
+  }
+
+  onSearch(searchKey: string) {
+    if (searchKey == '') {
+      this.searchResults = this.myData;
+    } else {
+      this.searchResults = this.myData.filter((item) => item.key === searchKey);
+    }
   }
 
   onLogout() {
