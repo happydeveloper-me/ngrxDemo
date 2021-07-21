@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>KeyValue</h1>
+  <hr />
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <label>Enter key:</label>
+      <input type="text" placeholder="key" class="form-control" #key />
+      <label>Enter value:</label>
+      <input type="text" placeholder="key" class="form-control" #value />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-primary" (click)="onSubmit(key, value)">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

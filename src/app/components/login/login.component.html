@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome to KeyValue</h1>
+  <hr />
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <label>Enter password</label>
+      <input
+        type="password"
+        placeholder="password"
+        class="form-control"
+        #login
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <button class="btn btn-success" (click)="onSumbit(login.value)">
+        Login
+      </button>
+    </div>
+  </div>
+</div>
